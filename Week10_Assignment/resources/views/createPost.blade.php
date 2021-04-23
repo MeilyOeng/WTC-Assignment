@@ -5,28 +5,24 @@
     <form name="sentMessage" id="contactForm" novalidate>
       <div class="control-group">
         <div class="form-group floating-label-form-group controls">
-          <label>Post</label>
-          <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
           <label>Category</label>
-          <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+          <select class="form-control form-control-lg">
+            <option id=opt1>Drink</option>
+            <option id=opt2>Food</option>
+            <option id=opt3>Snack</option>
+          </select>          
           <p class="help-block text-danger"></p>
         </div>
       </div>
       <div class="control-group">
         <div class="form-group floating-label-form-group controls">
           <label>Post</label>
-          <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+          <textarea type="text" class="form-control" placeholder="Post" id="name" required data-validation-required-message="Please enter your name."></textarea>
           <p class="help-block text-danger"></p>
         </div>
       </div>
       <br>
-      <div id="success"></div>
       <button type="submit" class="btn btn-primary" id="sendMessageButton">POST</button>
     </form>
-  </div>
+</div>
 @endsection
