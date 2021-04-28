@@ -12,9 +12,20 @@ class postController extends Controller
     return view('post', ['posts'=>$posts]);
     }
     public function edit(Post $post){
-        return view('edit', ['posts'=>$posts]);
+        return view('home', ['post'=>$post]);
     }
     public function createPost(){
         return view('createPost');
+    }
+    public function store(){
+        request()->validate([
+            'content' => 'required',
+            'category'=> 'required'
+        ]);
+        Post::create([
+            'content' => request('content'),
+            'category' => request('category')
+        ]);
+        return redirect('post');
     }
 }
