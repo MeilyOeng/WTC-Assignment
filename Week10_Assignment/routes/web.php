@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use app\Http\Controllers\postController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,11 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/post', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/createPost', [App\Http\Controllers\PagesController::class, 'Post']);
+Route::get('/post', [App\Http\Controllers\postController::class, 'index']);
+Route::get('/createPost', [App\Http\Controllers\postController::class, 'createPost']);
+Route::get('/post/{post}/edit', [App\Http\Controllers\postController::class, 'edit']);
 

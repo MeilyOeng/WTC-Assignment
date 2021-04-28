@@ -17,10 +17,10 @@
           <ul class="navbar-nav ml-auto">
               <!-- Authentication Links -->
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="/post">Post</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/createPost">Creat Post</a>
+                <a class="nav-link" href="/createPost">Create Post</a>
               </li>
               <hr>
               @guest

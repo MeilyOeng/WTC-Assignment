@@ -2,7 +2,11 @@
 
 @section('content')
 <div class="col-lg-8 col-md-10 mx-auto">
-    <form name="sentMessage" id="contactForm" novalidate>
+    <form method="POST" action="/home/{{ $post->id}}" sentMessage" id="contactForm" novalidate>
+
+    @method('PUT')
+
+    @csrf
       <div class="control-group">
         <div class="form-group floating-label-form-group controls">
           <label>Category</label>
@@ -10,7 +14,7 @@
             <option value="Drink" id=opt1>Drink</option>
             <option value="Food" id=opt2>Food</option>
             <option value="Snack" id=opt3>Snack</option>
-          </select>           
+          </select>          
           <p class="help-block text-danger"></p>
         </div>
       </div>

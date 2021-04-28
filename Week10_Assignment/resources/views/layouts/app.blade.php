@@ -12,20 +12,11 @@
 
   <!-- Navigation -->
    @include('includes.menu_nav')
-   
-  <!-- Page Header -->
-  @include('includes.header')
-
   <!-- Main Content -->
-  <div class="container">
-    <div class="row">
+  <div class="container mt-5">
         @yield('content')
-    </div>
   </div>
-  <hr>
 
-  <!-- Footer -->
-  @include('includes.footer')
   <!-- Bootstrap core JavaScript -->
   @include('includes.scripts')
 
